@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# lucasfrazier.com (v3)
 
-## Getting Started
+## About the Project
 
-First, run the development server:
+This is my personal website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Currently, v3 serves as my portfolio with simple "About" and "Contact" pages.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I'm currently focusing on fleshing out my project content for my portfolio, but I do plan to add additional features in the future. For example, I'd like to add a blog and feature music I've made as well.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All in good time. Thanks for checking out the code.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Table of Contents
 
-## Learn More
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Credits](#credits)
+- [License](#license)
 
-To learn more about Next.js, take a look at the following resources:
+## Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- React 18
+- TypeScript 5
+- NextJS 13 (App Router)
+- Sanity 5
+- Tailwind CSS 3
+- ESLint 8
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Clone the repo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```sh
+    git clone https://github.com/lucasfrazier/lucas-frazier-dot-com-v3.git
+    ```
+
+        or
+
+    ```sh
+    git clone git@github.com:lucasfrazier/lucas-frazier-dot-com-v3.git
+    ```
+
+1.  `cd` into the directory
+
+    ```sh
+    cd lucas-frazier-dot-com-v3
+    ```
+
+1.  run `npm install`
+
+    ```sh
+    npm install
+    ```
+
+1.  run `npm run dev`
+
+    ```sh
+    npm run dev
+    ```
+
+## Credits
+
+### Contributors
+
+- [LucasFrazier](https://github.com/LucasFrazier)
+
+### References / Resources
+
+- [React](https://react.dev/)
+- [NextJS](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Sanity](https://www.sanity.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## License
+
+MIT
