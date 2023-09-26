@@ -17,14 +17,18 @@ export default async function Project({ params }: Props) {
         <h1 className="text-blue text-3xl lg:text-5xl drop-shadow font-extrabold">
           {project.title}
         </h1>
-        <div className="flex gap-5">
+        <div className="flex flex-col md:flex-row gap-5">
           <a
-            href={project.url}
+            href={project.repoUrl}
             tabIndex={0}
             title="View GitHub Repository"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-dark border-2 border-light hover:border-green focus:border-green hover:text-green focus:text-green rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition hover:scale-105 focus:scale-105 cursor-pointer"
+            className={`flex items-center gap-2.5 bg-dark border-2 border-light rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition ${
+              project.repoUrl
+                ? "hover:scale-105 focus:scale-105 cursor-pointer hover:border-green focus:border-green hover:text-green focus:text-green"
+                : ""
+            }`}
           >
             <span>View GitHub Repo</span>
             <Image src={"/new-window.svg"} alt={""} width={25} height={25} />
@@ -44,7 +48,7 @@ export default async function Project({ params }: Props) {
       </header>
 
       {/* content */}
-      <div className="text-lg text-light mt-5">
+      <div className="text-lg text-light mt-10">
         <PortableText value={project.content} />
       </div>
 
