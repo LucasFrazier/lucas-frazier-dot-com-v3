@@ -37,6 +37,11 @@ const project = {
       type: "url",
     },
     {
+      name: "repoUrl",
+      title: "Repo URL",
+      type: "url",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",
