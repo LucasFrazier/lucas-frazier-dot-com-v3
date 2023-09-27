@@ -8,12 +8,17 @@ export default async function Home() {
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-6xl font-extrabold text-light pr-16">
-        I&apos;m <span className="text-blue">Lucas Frazier</span>.
+        I&apos;m <br className="md:hidden" />
+        <span className="text-blue">
+          Lucas <br className="md:hidden" />
+          Frazier
+        </span>
+        .
       </h1>
       <p className="mt-3 text-xl text-pink">This is my portfolio</p>
       <h2 className="mt-16 font-bold text-blue text-3xl">Projects</h2>
       <p className="mt-3 text-xl text-pink">Select a project to learn more</p>
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto">
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}

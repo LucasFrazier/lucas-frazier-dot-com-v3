@@ -13,18 +13,21 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <header className="flex flex-col lg:flex-row justify-between items-center gap-y-5">
-        <h1 className="text-blue text-3xl lg:text-5xl drop-shadow font-extrabold">
-          {project.title}
-        </h1>
-        <div className="flex flex-col md:flex-row gap-5">
+      <header className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-y-5">
+        <div className="text-center lg:text-left">
+          <h1 className="text-blue text-3xl lg:text-6xl drop-shadow font-extrabold">
+            {project.title}
+          </h1>
+          <p className="mt-3 text-xl text-pink">{project.subtitle}</p>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-5 mt-2">
           <a
             href={project.repoUrl}
             tabIndex={0}
             title="View GitHub Repository"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2.5 bg-dark border-2 border-light rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition ${
+            className={`flex items-center justify-center gap-2.5 bg-dark border-2 border-light rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition ${
               project.repoUrl
                 ? "hover:scale-105 focus:scale-105 cursor-pointer hover:border-green focus:border-green hover:text-green focus:text-green"
                 : ""
@@ -39,7 +42,7 @@ export default async function Project({ params }: Props) {
             tabIndex={0}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-dark border-2 border-light hover:border-green focus:border-green hover:text-green focus:text-green rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition hover:scale-105 focus:scale-105 cursor-pointer"
+            className="flex items-center justify-center gap-2.5 bg-dark border-2 border-light hover:border-green focus:border-green hover:text-green focus:text-green rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition hover:scale-105 focus:scale-105 cursor-pointer"
           >
             <span>View Live Site</span>
             <Image src={"/new-window.svg"} alt={""} width={25} height={25} />
@@ -47,8 +50,12 @@ export default async function Project({ params }: Props) {
         </div>
       </header>
 
+      <h2 className="mt-16 text-blue text-3xl font-bold">About the Project</h2>
+      <p className="mt-3 text-xl text-pink">Coming Soon</p>
+
       {/* content */}
-      <div className="text-lg text-light mt-10">
+      <h2 className="mt-16 text-blue text-3xl font-bold">Built With</h2>
+      <div className="text-light mt-5">
         <PortableText value={project.content} />
       </div>
 
