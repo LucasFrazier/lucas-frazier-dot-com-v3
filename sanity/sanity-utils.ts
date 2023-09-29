@@ -17,7 +17,7 @@ export async function getProjects(): Promise<Project[]> {
         repoUrl,
         content
     }`,
-    { cache: "no-store" }
+    { next: { revalidate: 10 } }
   );
 }
 
@@ -35,7 +35,7 @@ export async function getProject(slug: string): Promise<Project> {
         repoUrl,
         content
     }`,
-    { slug, cache: "no-store" }
+    { slug, next: { revalidate: 10 } }
   );
 }
 
@@ -47,7 +47,7 @@ export async function getPages(): Promise<Page[]> {
       title,
       "slug": slug.current
     }`,
-    { cache: "no-store" }
+    { next: { revalidate: 10 } }
   );
 }
 
@@ -60,6 +60,6 @@ export async function getPage(slug: string): Promise<Page> {
     "slug": slug.current,
     content
   }`,
-    { slug, cache: "no-store" }
+    { slug, next: { revalidate: 10 } }
   );
 }
