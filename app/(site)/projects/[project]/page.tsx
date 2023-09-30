@@ -2,6 +2,8 @@ import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
+export const revalidate = 0;
+
 type Props = {
   params: { project: string };
 };
