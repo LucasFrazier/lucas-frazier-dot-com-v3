@@ -1,6 +1,8 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
+export const revalidate = 0;
+
 type Props = {
   params: { slug: string };
 };
