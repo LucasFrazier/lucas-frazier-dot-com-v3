@@ -32,7 +32,7 @@ export default async function Project({ params }: Props) {
             className={`flex items-center justify-center gap-2.5 bg-dark border-2 border-light rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition ${
               project.repoUrl
                 ? "hover:scale-105 focus:scale-105 cursor-pointer hover:border-green focus:border-green hover:text-green focus:text-green"
-                : ""
+                : "opacity-50"
             }`}
           >
             <span>View GitHub Repo</span>
@@ -44,7 +44,11 @@ export default async function Project({ params }: Props) {
             tabIndex={0}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 bg-dark border-2 border-light hover:border-green focus:border-green hover:text-green focus:text-green rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition hover:scale-105 focus:scale-105 cursor-pointer"
+            className={`flex items-center justify-center gap-2.5 bg-dark border-2 border-light rounded-lg text-light font-medium py-3 px-4 whitespace-nowrap transition ${
+              project.url
+                ? "hover:border-green focus:border-green hover:text-green focus:text-green rounded-lg hover:scale-105 focus:scale-105 cursor-pointer"
+                : "opacity-50"
+            }`}
           >
             <span>View Live Site</span>
             <Image src={"/new-window.svg"} alt={""} width={25} height={25} />
