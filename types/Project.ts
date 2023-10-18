@@ -10,5 +10,6 @@ export type Project = {
   alt: string;
   url: string;
   repoUrl: string;
+  about: PortableTextBlock[];
   content: PortableTextBlock[];
 };
