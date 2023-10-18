@@ -57,10 +57,12 @@ export default async function Project({ params }: Props) {
       </header>
 
       <h2 className="mt-16 text-blue text-3xl font-bold">About the Project</h2>
-      <p className="mt-3 text-xl text-pink">Coming Soon</p>
+      <div className="text-light mt-5">
+        <PortableText value={project.about} />
+      </div>
 
       {/* content */}
-      <h2 className="mt-16 text-blue text-3xl font-bold">Built With</h2>
+      <h2 className="mt-10 text-blue text-3xl font-bold">Built With</h2>
       <div className="text-light mt-5">
         <PortableText value={project.content} />
       </div>
