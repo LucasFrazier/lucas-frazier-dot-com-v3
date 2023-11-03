@@ -11,7 +11,8 @@
     "prettier:fix": "npx prettier --write .",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:e2e": "playwright test"
   },
   "lint-staged": {
     "*.{css,less,scss,html,json,js,jsx,ts,tsx}": [
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
+    "@playwright/test": "^1.39.0",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "autoprefixer": "^10.4.16",
