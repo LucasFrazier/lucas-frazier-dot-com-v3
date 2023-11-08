@@ -6,7 +6,7 @@ on:
 
 jobs:
   test_setup:
-    name: Test setup
+    name: Setup
     runs-on: ubuntu-latest
     outputs:
       preview_url: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
@@ -19,15 +19,15 @@ jobs:
           max_timeout: 300
   test_e2e:
     needs: test_setup
-    name: Playwright tests
+    name: Run Tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - name: Prepare testing env
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: "18"
       - run: npm ci
       - run: npx playwright install --with-deps
       - name: Run tests
