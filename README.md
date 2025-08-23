@@ -27,6 +27,7 @@ All in good time. Thanks for checking out the code.
 - Sanity 5
 - Tailwind CSS 3
 - ESLint 8
+- Node 22
 
 ## Installation
 
